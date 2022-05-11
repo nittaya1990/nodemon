@@ -96,7 +96,7 @@ nodemon (from 1.4.2 onwards) uses [Chokidar](https://www.npmjs.com/package/choki
 
 If you find your files aren't being monitored, either nodemon isn't restarting, or it reports that zero files are being watched, then you may need the polling mode.
 
-To enable polling use the the legacy flag either via the terminal:
+To enable polling use the legacy flag either via the terminal:
 
 ```shell
 $ nodemon --legacy-watch
@@ -153,7 +153,7 @@ sudo ln -s /usr/bin/nodejs /usr/local/bin/node
 
 Alternatively the `--exec nodejs` option can be used.
 
-Fedora and Ubuntu pakage node as nodejs, because node.dpkg is
+Fedora and Ubuntu package node as nodejs, because node.dpkg is
 
 > Description-en: Amateur Packet Radio Node program
 > The node program accepts TCP/IP and packet radio network connections and
@@ -323,3 +323,11 @@ It's a security restriction of the Windows PowerShell.
 1. Open up a powershell command window (open it as administrator)
 2. To check out current restrictions type "Get-ExecutionPolicy"
 3. Enable powershell by typing "Set-ExecutionPolicy remotesigned"
+
+## How can I watch all file types in a folder?
+
+To watch all file types, use `'*'`:
+
+```bash
+nodemon --ext '*' --watch public --exec 'python -m SimpleHTTPServer'
+```
